@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+void menu();
+void game();
+
+#include"5.h"
+void menu()
+{
+	printf("*********************\n");
+    printf("** 1.Play   0.Exit **\n");
+    printf("*********************\n");
+}
+ void game()
+ {
+	 int g = 0;
+	 int guess;
+	 g = rand()%100+1;
+	 printf("%d",g);
+	 while(1)
+   {
+	 printf("Guess what?->: ");
+	 scanf("%d",&guess);
+	 if(g > guess)
+	 {
+		 printf("It's smaller than the number.\n");
+	 }
+	 else if(g < guess)
+	 {
+         printf("It's bigger than the number.\n");
+	 }
+	 else 
+	{
+		 printf("Congratulation!You're right!\n");
+		 break;
+	 }
+   }
+ }
